@@ -3,7 +3,7 @@
 There is a bazel project with turning ON remote caching.
 Some targets are build using aspect, which provides `OutputGroupInfo` for `--output_groups` command option.
 
-All requested generated files preset when we build target without remote caching.
+All requested generated files present when we build target without remote caching.
 And we have output files miss for files from `--output_groups` when we build with cache hits and remote caching.
 
 Caching server starts by:
