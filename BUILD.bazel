@@ -1,0 +1,18 @@
+load(":platform_switch.bzl", "platform_switch")
+
+cc_library(
+    name = "foo",
+    srcs = ["foo.cpp"],
+)
+
+platform_switch(
+    name = "foo_1",
+    src = ":foo",
+    platforms = ["@//platforms:host"]
+)
+
+platform_switch(
+    name = "foo_2",
+    src = ":foo",
+    platforms = ["@//platforms_aliases:host"]
+)

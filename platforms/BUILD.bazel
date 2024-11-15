@@ -1,0 +1,8 @@
+load("@local_config_platform//:constraints.bzl", "HOST_CONSTRAINTS")
+
+package(default_visibility = ["//visibility:public"])
+
+platform(
+    name = "host",
+    constraint_values = HOST_CONSTRAINTS,
+)
